@@ -29,6 +29,7 @@ Metode penelitian yang paling tepat digunakan adalah metode Waterfall. Metode in
 
 
 
+![alt text](https://github.com/salwasyahratul/UTS-RPL-/blob/main/WATERFALL.SALWA.jpg?raw=true)
 
 
 Gambar 1.Metode Waterfall 
@@ -59,7 +60,7 @@ Kasir
 •	Memverifikasi pembayaran siswa.
 •	Mengubah status pembayaran (lunas/belum lunas).
 
-
+![alt text](https://github.com/salwasyahratul/UTS-RPL-/blob/main/USE.CASE%20SALWA.png?raw=true)
  Gambar 2. Use Case Diagram Sistem pemesanan makanan
 
                                             
@@ -86,6 +87,7 @@ Kasir
 
 
 
+![alt text](https://github.com/salwasyahratul/UTS-RPL-/blob/main/CLASSDIAGRAM.SALWA.png?raw=true)
 
 Gambar 3. Class diagram pemesanan makan
 2.	ALUR SISTEM PEMESANAN – PEMBAYARAN (Berdasarkan UML)
@@ -156,6 +158,7 @@ Berikut tiga contoh pola desain( creational desaig patterns)
 OrderService pada gambar merupakan contoh penerapan Single Responsibility Principle (SRP), di mana satu kelas hanya menangani satu jenis tanggung jawab, yaitu pengelolaan data dan proses terkait pemesanan. Kelas ini berfokus sepenuhnya pada operasi order, seperti membuat pesanan baru melalui fungsi createOrder, menghitung total harga item dengan calculateTotal, serta mengubah status pesanan menggunakan updateStatus. Dengan hanya menangani logika yang berhubungan langsung dengan order, kelas ini menjadi lebih terstruktur, mudah dikelola, serta lebih mudah diuji karena tidak bercampur dengan logika lain seperti pembayaran, notifikasi, atau manajemen pengguna.
 
 
+![alt text](https://github.com/salwasyahratul/UTS-RPL-/blob/main/orderservice.salwa.drawio.png?raw=true)
 
 
 
@@ -167,6 +170,7 @@ OrderService pada gambar merupakan contoh penerapan Single Responsibility Princi
 OrderRepository adalah kelas yang bertanggung jawab khusus untuk melakukan operasi data terkait pesanan (order) pada lapisan penyimpanan, seperti database. Dengan menerapkan Single Responsibility Principle (SRP), kelas ini hanya berfokus pada tugas mengelola akses data, sehingga semua proses pengambilan, penyimpanan, dan pembaruan order dilakukan melalui metode seperti save(order), findById(orderId), dan update(order). OrderRepository tidak menangani logika bisnis seperti perhitungan total atau pengubahan status; tugas tersebut tetap berada di OrderService. Pemisahan ini membuat arsitektur lebih bersih, memudahkan pengujian, serta mempermudah penggantian sistem penyimpanan di masa depan tanpa mengubah logika utama aplikasi.
 
 
+![alt text](https://github.com/salwasyahratul/UTS-RPL-/blob/main/OrderResopotory.salwa.drawio.png?raw=true)
 
 
 
@@ -185,6 +189,7 @@ OrderRepository adalah kelas yang bertanggung jawab khusus untuk melakukan opera
 NotificationService adalah kelas yang memiliki satu tanggung jawab utama, yaitu mengirimkan notifikasi kepada pengguna ketika terjadi suatu peristiwa dalam sistem, seperti pesanan dibuat, status berubah, atau pembayaran berhasil. Dengan menerapkan Single Responsibility Principle (SRP), kelas ini hanya fokus pada pengelolaan proses pengiriman notifikasi tanpa mencampurkannya dengan logika bisnis lain seperti pembuatan order atau pengelolaan data. Metode-metode seperti sendEmail(user, message) atau sendSMS(user, message) berada di dalam kelas ini karena semuanya berkaitan dengan tugas pengiriman pemberitahuan. Pemisahan ini membuat aplikasi lebih modular, mudah diperluas, dan memungkinkan perubahan pada mekanisme notifikasi—misalnya dari email ke push notification—tanpa memengaruhi bagian sistem lainnya
 
 
+![alt text](https://github.com/salwasyahratul/UTS-RPL-/blob/main/NotificationServer.Salwa.drawio.png?raw=true)
 
 
 
@@ -194,6 +199,7 @@ NotificationService adalah kelas yang memiliki satu tanggung jawab utama, yaitu 
 
 4.Tahapan tahapan pada salah satu proses penting dalam sistem
 
+![alt text](https://github.com/salwasyahratul/UTS-RPL-/blob/main/TAHAPAN.SALWA.drawio.png?raw=true)
 
 
 
@@ -242,5 +248,7 @@ Tahapan-Tahapan Proses Pemesanan Makanan di Kantin Sekolah
 11.	Proses selesai
 
 
+State Machine 
+![alt text](https://github.com/salwasyahratul/UTS-RPL-/blob/main/state%20machine.salwa.drawio.png?raw=true)
 
 
